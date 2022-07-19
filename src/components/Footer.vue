@@ -11,8 +11,9 @@ footer{
     position: fixed;
     bottom:0;
     width: 100vw;
-    height: 30px;
-    color:white;
+    height: 25px;
+    color:black;
+    background-color: rgba(255,255,255, 0.7);
 }
 .flex{
     display: flex;

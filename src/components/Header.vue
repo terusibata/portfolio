@@ -1,5 +1,6 @@
 <template>
-    <div class="space">
+    <div class="background-img">
+        <img src="/images/home.jpg">
     </div>
     <div :class="isLoading? 'loading': ''"></div>
     <header>
@@ -31,6 +32,15 @@ const isLoading = ref(true)
 const router = useRouter()
 const route = useRoute()
 
+router.beforeEach((to, from, next)=>{
+    isLoading.value = true
+    next()
+})
+router.afterEach(()=>{
+    isLoading.value = false
+})
+
+
 function goPage(page){
     console.log(page)
     switch(page){
@@ -50,6 +60,20 @@ function goPage(page){
 
 </script>
 <style scoped>
+.background-img{
+    z-index:-1;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width:100vw;
+    height:100vh;
+}
+.background-img img{
+    position:absolute ;
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+}
 .link-style{
     color: black;
     text-decoration: none;
@@ -89,13 +113,13 @@ header{
     border: 2px rgba(255,255,255,0.2) solid;
     border-bottom: 2px rgba(40,40,40,0.2) solid;
     border-right: 2px rgba(40,40,40,0.2) solid;
-    color: white;
+    color: black;
     gap: 20px;
 }
 a{
     text-decoration: none;
-    color: white;
-    text-shadow: 3px 3px 3px #9996E1;
+    color: black;
+    text-shadow: 3px 3px 3px #aed581;
 }
 .center{
     display: flex;
