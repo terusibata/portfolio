@@ -1,13 +1,13 @@
 <template>
     <div class="background-img">
-        <img src="/images/home.jpg">
+        <img src="/images/about.jpg">
     </div>
     <div :class="isLoading? 'loading': ''"></div>
     <header>
         <div class="left center logo">
             <div class="hamburger"></div>
             <a @click="goPage('home')">
-                <h1>terusibata's ポートフォリオ</h1>
+                <h1>ポートフォリオ</h1>
             </a>
         </div>
         <div class="right menu">
@@ -73,6 +73,7 @@ function goPage(page){
     width:100vw;
     height:100vh;
     overflow: hidden;
+    object-fit: cover;
 }
 .link-style{
     color: black;

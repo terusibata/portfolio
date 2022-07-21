@@ -6,7 +6,7 @@ import { useRoute } from "vue-router"
 </script>
 
 <template>
-    <Header :isLogin="isLogin" :icon="icon"/>
+    <Header/>
     <div class="main">
         <router-view />
     </div>
@@ -23,5 +23,16 @@ import { useRoute } from "vue-router"
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+}
+@font-face {
+  font-family: "YuGothic M";
+  src: local("Yu Gothic Medium"),
+       local("Yu Gothic");
+  font-weight: 500;
+       /*
+         Chrome 58.0.3029.110 (64-bit) では
+         "Yu Gothic Medium" を認識しないバグあるため
+         "Yu Gothic" と font-weight も併せて指定。
+       */
 }
 </style>
