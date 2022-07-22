@@ -20,7 +20,7 @@ const router =  createRouter({
             component: () => import('./views/About.vue')
         },
         {
-            path: '/project',
+            path: '/project/:id',
             name: 'project',
             props: true,
             meta:{
@@ -32,13 +32,13 @@ const router =  createRouter({
             path: `/:catchAll(.*)`,
             name: 'notFound',
             meta:{
-                title: "ページが見つからないよん"  
+                title: "ページがないようです"  
             },
             component: () => import('./views/NotFound.vue')
         }
     ]
 })
 router.afterEach((to, from) => {
-    document.title = `${to.meta.title} | terusibata` || "URL共有できちまう"
+    document.title = `${to.meta.title} | terusibata` || "terusibata's ポートフォリオ"
 })
 export default router

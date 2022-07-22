@@ -51,7 +51,12 @@ function goPage(page){
             router.push("/about");
             break;
         case "project":
-            router.push("/project");
+            router.push({
+                name: "project",
+                params:{
+                    id: "all"
+                },
+            });
             break;
         default:
             router.push("/notFound");
