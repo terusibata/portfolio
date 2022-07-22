@@ -13,7 +13,6 @@ footer{
     width: 100vw;
     height: 25px;
     color:black;
-    background-color: rgba(255,255,255, 0.7);
 }
 .flex{
     display: flex;

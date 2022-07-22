@@ -1,6 +1,6 @@
 <template>
     <div class="background-img">
-        <img src="/images/about.jpg">
+        <img src="/images/river_00006.jpg">
     </div>
     <div :class="isLoading? 'loading': ''"></div>
     <header>
@@ -119,13 +119,14 @@ header{
     border: 2px rgba(255,255,255,0.2) solid;
     border-bottom: 2px rgba(40,40,40,0.2) solid;
     border-right: 2px rgba(40,40,40,0.2) solid;
-    color: black;
+    color: white;
     gap: 20px;
 }
 a{
+    font-family: "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
     text-decoration: none;
-    color: black;
-    text-shadow: 3px 3px 3px #aed581;
+    color: white;
+    text-shadow: 3px 3px 3px black;
 }
 .center{
     display: flex;
@@ -142,15 +143,18 @@ a{
     align-items: center;
     border-radius: 3px;
     background: rgba(174,213,129, 0.2);
-    box-shadow: inset 5px 5px 2px #aed581,
-            inset -5px -5px 2px #aed581;
+    box-shadow: rgba(0, 0, 0, 0.7) 2px 8px 8px;
     cursor: pointer;
+    transform: skew(-10deg)
 }
 .button:hover{
-    background: rgba(174,213,129, 0.5);
+    background: rgba(174,213,129, 0.8);
 }
-.button a{
-
+.button:active{
+    box-shadow:none
+}
+.button p{
+    transform: none
 }
 
 .loading { 
