@@ -18,7 +18,7 @@ onBeforeMount(()=>{
   console.log(props.id)
   switch(props.id){
     case "all":
-      document.title = `プロジェクト一覧 | 募集プラットフォーム`
+      document.title = `プロジェクト一覧 | terusibata`
       break
     default:
       router.push("/notFound");
