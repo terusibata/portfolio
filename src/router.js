@@ -20,11 +20,20 @@ const router =  createRouter({
             component: () => import('./views/About.vue')
         },
         {
+            path: '/projectlist',
+            name: 'projectlist',
+            props: true,
+            meta:{
+                title: "プロジェクト一覧"  
+            },
+            component: () => import('./views/ProjectList.vue')
+        },
+        {
             path: '/project/:id',
             name: 'project',
             props: true,
             meta:{
-                title: "プロジェクト一覧"  
+                title: "プロジェクト"  
             },
             component: () => import('./views/Project.vue')
         },

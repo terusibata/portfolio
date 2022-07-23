@@ -1,30 +1,34 @@
 <template>
     <div class="glass-container">
-        <div>
-            <div>
-                <h1>3密ポイント</h1>
+        <div class="card-area">
+            <div class="title-area">
+                <h1>{{data.title}}</h1>
             </div>
-            <div class="flex">
+            <div class="flex body-area">
                 <div class="img-area">
-                    <img src="/images/river_00006.jpg">
-                </div>
-                <div>
-                    <div>
-                        <h3>--概要--</h3>
-                        <p>IoTで食堂の混雑度を推定し、混雑していない場合に食堂で使えるポイントが貰えるサービス。チームリーダとして基盤技術を開発</p>
-                    </div>
-                    <div>
-                        <h3>--担当--</h3>
-                        <p>フロントエンド(モバイル画面)</p>
-                    </div>
-                    <div>
-                        <h3>--使用技術--</h3>
-                        <p>HTML, CSS, JavaScript</p>
+                    <div class="img-div">
+                        <img :src="data.img">
                     </div>
                 </div>
+                <div class="comment-area">
+                    <div class="comment-area-padding">
+                        <div class="charge-area">
+                            <h3>〘 <font-awesome-icon icon="fa-solid fa-people-line" /> 担当 〙</h3>
+                            <p>{{data.charge}}</p>
+                        </div>
+                        <div class="margin-top-10px">
+                            <h3>〘 <font-awesome-icon icon="fa-brands fa-laravel" /> 使用技術 〙</h3>
+                            <p>{{data.technology}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-area">
+                <h3>〘 <font-awesome-icon icon="fa-brands fa-stack-overflow" /> 概要 〙</h3>
+                <p>{{data.detail}}</p>
             </div>
             <div class="button-area">
-                <Button>詳しく見る</Button>
+                <Button @click="goProject(data.id)"><font-awesome-icon icon="fa-solid fa-arrow-trend-up" /> 詳しく見る</Button>
             </div>
         </div>
     </div>
@@ -32,14 +36,40 @@
 
 <script setup>
 import Button from "../../components/Button.vue"
+import { reactive, ref, defineProps} from "vue";
+import {useRouter, useRoute} from "vue-router";
+const router = useRouter()
 
+const props = defineProps({
+    data: {
+        type: Object,
+        default: []
+    },
+})
+
+function goProject(link){
+    setTimeout(function(){
+        router.push({
+            name: "project",
+            params:{
+                id: link
+            },
+        })
+    }
+    ,400);
+}
 
 </script>
 
 <style scoped>
+p,h1{
+    font-family: "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+    text-shadow: 2px 1px 0 rgba(0,0,0,.8);
+    font-weight: 900;
+}
 .glass-container{
     width: 700px;
-    height: 450px;
+    height: 460px;
     color: white;
     display: flex;
     justify-content: center;
@@ -54,17 +84,80 @@ import Button from "../../components/Button.vue"
     border-right: 2px rgba(40,40,40,0.35) solid;
     margin-bottom:40px;
 }
-h1{
-    font-size:30px;
-}
 .flex{
     display:flex;
 }
-.img-area{
-
+.card-area{
+    padding:8px;
 }
-.img-area img{ 
-    width:200px;
-
+.title-area{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size:30px;
+    padding:0 10px;
+    margin-top:0;
+    border-bottom: double 7px #034FBC;/*右線*/
+}
+h3{
+    color:white;
+    font-size:20px;
+}
+.body-area{
+    width:100%;
+}
+.img-area{
+    width:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-div{
+    width:275px;
+}
+.img-div img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.comment-area{
+    width:50%;
+}
+.comment-area-padding{
+    padding-right:15px;
+}
+.charge-area{
+    max-height:105px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.margin-top-10px{
+    margin-top:10px;
+}
+p,h3{
+    margin:0;
+}
+.detail-area{
+    padding:0 35px;
+    margin:10px 0;
+    width:614px;
+    height:80px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.button-area{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-area Button{
+    background-color:#034FBC;
+    color:white;
 }
 </style>

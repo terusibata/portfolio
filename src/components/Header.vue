@@ -1,6 +1,6 @@
 <template>
     <div class="background-img">
-        <img src="/images/river_00006.jpg">
+        <img src="/images/background.jpeg">
     </div>
     <div :class="isLoading? 'loading': ''"></div>
     <header>
@@ -17,7 +17,7 @@
             <div @click="goPage('about')" class="button">
                 <p><font-awesome-icon icon="user" /> 私について</p>
             </div>
-            <div @click="goPage('project')" class="button">
+            <div @click="goPage('projectlist')" class="button">
                 <p><font-awesome-icon icon="book" /> プロジェクト</p>
             </div>
         </div>
@@ -50,13 +50,8 @@ function goPage(page){
         case "about":
             router.push("/about");
             break;
-        case "project":
-            router.push({
-                name: "project",
-                params:{
-                    id: "all"
-                },
-            });
+        case "projectlist":
+            router.push("/projectlist");
             break;
         default:
             router.push("/notFound");
@@ -142,19 +137,23 @@ a{
     justify-content: center;
     align-items: center;
     border-radius: 3px;
-    background: rgba(174,213,129, 0.2);
-    box-shadow: rgba(0, 0, 0, 0.7) 2px 8px 8px;
+    background: rgba(255,255,255, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.7) 2px 4px 4px;
     cursor: pointer;
     transform: skew(-10deg)
-}
-.button:hover{
-    background: rgba(174,213,129, 0.8);
 }
 .button:active{
     box-shadow:none
 }
 .button p{
+    color:black;
     transform: none
+}
+.button:hover{
+    background: #034FBC;
+}
+.button:hover p{
+    color:white;
 }
 
 .loading { 
