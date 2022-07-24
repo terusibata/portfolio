@@ -46,6 +46,14 @@ const project_list = ref([
 		technology:"Node.js, Express",
 		detail:"OAuth2.0ログインを簡単に実装できるExpress用のミドルウェア",
 		id:"jetOauth"
+	},
+	{
+		title:"ugoiita-code",
+		img:"/images/project/list/ugoiita-code.jpg",
+		charge:"フロントエンド",
+		technology:"HTML, CSS, JavaScript",
+		detail:"有名な技術サイトであるQiitaをターゲットに実際に「うごいた」記事を共有できる Chrome 拡張機能を開発した。",
+		id:"ugoiita-code"
 	}
 ])
 

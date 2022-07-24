@@ -2,8 +2,9 @@
 	<div class="flex-area">
 		<div class="project-area">
 			<cafepage v-if="id == 'cafe_page'"></cafepage>
-			<jetOauth v-if="id == 'OECU_Project'"></jetOauth>
-			<OECUProject v-if="id == 'jetOauth'"></OECUProject>
+			<jetOauth v-if="id == 'jetOauth'"></jetOauth>
+			<OECUProject v-if="id == 'OECU_Project'"></OECUProject>
+			<ugoiitacode v-if="id == 'ugoiita-code'"></ugoiitacode>
 		</div>
 	</div>
 	<div v-if="scrollHeader" @click="scrollTop" class="return-button-area">
@@ -21,6 +22,7 @@ import projectCard from "../components/project/Project_card.vue"
 import cafepage from "../components/project/cafe_page.vue"
 import jetOauth from "../components/project/jetOauth.vue"
 import OECUProject from "../components/project/OECU_Project.vue"
+import ugoiitacode from "../components/project/ugoiita-code.vue"
 
 const router = useRouter()
 const route = useRoute()
@@ -58,20 +60,24 @@ function goProject(){
 }
 
 onBeforeMount(()=>{
-  console.log(props.id)
-  switch(props.id){
-	case "cafe_page":
-		document.title = `3密ポイント | terusibata`
-		break
-	case "OECU_Project":
-		document.title = `OECUプロジェクト | terusibata`
-		break
-	case "jetOauth":
-		document.title = `jetOauth | terusibata`
-		break
-    default:
-        router.push("/notFound");
-  }
+	scrollTop()
+	console.log(props.id)
+	switch(props.id){
+		case "cafe_page":
+			document.title = `3密ポイント | terusibata`
+			break
+		case "OECU_Project":
+			document.title = `OECUプロジェクト | terusibata`
+			break
+		case "jetOauth":
+			document.title = `jetOauth | terusibata`
+			break
+		case "ugoiita-code":
+			document.title = `ugoiita-code | terusibata`
+			break
+		default:
+			router.push("/notFound");
+	}
 })
 </script>
 
