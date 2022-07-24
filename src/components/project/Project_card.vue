@@ -13,18 +13,18 @@
                 <div class="comment-area">
                     <div class="comment-area-padding">
                         <div class="charge-area">
-                            <h3>〘 <font-awesome-icon icon="fa-solid fa-people-line" /> 担当 〙</h3>
+                            <h3>　<font-awesome-icon icon="fa-solid fa-people-line" /> 担当</h3>
                             <p>{{data.charge}}</p>
                         </div>
                         <div class="margin-top-10px">
-                            <h3>〘 <font-awesome-icon icon="fa-brands fa-laravel" /> 使用技術 〙</h3>
+                            <h3>　<font-awesome-icon icon="fa-brands fa-laravel" /> 使用技術</h3>
                             <p>{{data.technology}}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="detail-area">
-                <h3>〘 <font-awesome-icon icon="fa-brands fa-stack-overflow" /> 概要 〙</h3>
+                <h3>　<font-awesome-icon icon="fa-brands fa-stack-overflow" /> 概要</h3>
                 <p>{{data.detail}}</p>
             </div>
             <div class="button-area">
@@ -62,10 +62,9 @@ function goProject(link){
 </script>
 
 <style scoped>
-p,h1{
+p{
     font-family: "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
-    text-shadow: 2px 1px 0 rgba(0,0,0,.8);
-    font-weight: 900;
+    text-shadow: 1px 2px 0 rgba(0,0,0,.8);
 }
 .glass-container{
     width: 700px;
@@ -97,13 +96,18 @@ p,h1{
 }
 h1{
     font-size:30px;
-    padding:0 10px;
+    padding:0 20px;
     margin-top:0;
-    border-bottom: double 7px #034FBC;/*右線*/
+    color: #6cb4e4;
+    border-top: solid 2px #6cb4e4;
+    border-bottom: solid 2px #6cb4e4;
+    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
 }
 h3{
     color:white;
     font-size:20px;
+    border-left: solid 5px white;
 }
 .body-area{
     width:100%;
@@ -116,6 +120,7 @@ h3{
 }
 .img-div{
     width:275px;
+    height:190px;
 }
 .img-div img{
     object-fit: contain;
