@@ -70,8 +70,8 @@
                 <img src="/images/project/cafe_page/6_1.png">
             </div>
             <h4>アーカイブはこちら</h4>
-            <div class="img-area">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/T9f9yqIoR-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="iframe-area">
+                <iframe src="https://www.youtube.com/embed/T9f9yqIoR-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <h3>７　掲載されました</h3>
@@ -134,6 +134,18 @@ const link_list = ref([
 </script>
 
 <style scoped>
+.iframe-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iframe-area iframe{
+    width:90%;
+    aspect-ratio:16/9;
+    margin-bottom:10px;
+}
+
+
 .detail-area{
     width:90%;
 }
@@ -241,6 +253,7 @@ a{
     border-radius:3px;
     box-shadow: rgba(0, 0, 0, 0.5) 2px 1px 1px;
     margin-bottom:10px;
+    word-break: break-all;
 }
 .link-preview:hover{
     background-color:#1a73e8;
