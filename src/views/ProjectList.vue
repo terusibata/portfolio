@@ -7,7 +7,7 @@
       </div>
     </div>
 	<div v-if="scrollHeader" @click="scrollTop" class="return-button-area">
-		<img src="/public/images/mitukuma_top.png">
+		<img src="/images/mitukuma_top.png">
 	</div>
 </template>
 

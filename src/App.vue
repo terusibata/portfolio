@@ -15,7 +15,7 @@ import { useRoute } from "vue-router"
 
 <style scoped>
 .main {
-    min-height: 100vh;
+    min-height: calc(100vh - 30px);;
 }
 * {
     -ms-user-select: none; /* IE 10+ */

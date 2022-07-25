@@ -11,10 +11,10 @@
             <p>オープンキャンパスの出し物として食堂内の混雑度を推定・予測するアプリを開発しました。</p>
             <p>iPhoneなどの端末から発せられるBluetooth信号から食堂内に何人が入店しているかを推定しています。Bluetooth信号を発する端末数には個人差があるため、実際の人数とずれないように統計的に推定しています。</p>
             <div class="img-area">
-                <img src="/public/images/project/cafe_page/1_1.png">
+                <img src="/images/project/cafe_page/1_1.png">
             </div>
             <div class="img-area">
-                <img src="/public/images/project/cafe_page/1_2.png">
+                <img src="/images/project/cafe_page/1_2.png">
             </div>
 
             <h3>２　混雑度を自主的に緩和するには</h3>
@@ -24,7 +24,7 @@
             <p><span class="span-red">参加するメリットが感じられないからです。</span></p>
             <p>この課題を解決するための仕組みとして、<span class="span-pink">食堂が空いている時にカードリーダに学生証をタッチするとポイントが貯まるサービスを開発しました。</span>1回につき10ポイント(10円分)で100ポイント貯まると食堂で100円引きされるシステムです。予算は、教授に熱意を伝え、<span class="span-black">学長裁量経費</span>から捻出していただきました。</p>
             <div class="img-area">
-                <img src="/public/images/project/cafe_page/2_1.jpeg">
+                <img src="/images/project/cafe_page/2_1.jpeg">
             </div>
             <p>本大学で初めて学部1・2年生(全24名)が自主的に大学で大規模に使われるシステムを作る前例を作りました。 </p>
 
@@ -32,7 +32,7 @@
             <p>新型コロナウイルスにより、「3密」を避けることが大事だとニュースで報道されているのを見て、3密を避けたら得をするにはどうすればいいかを考えたときにポイントを付与すればいいという発想になったことから、<span class="span-pink">「3密ポイント」</span>と提案しました。</p>
             <p>ロゴはチームリーダーがオリンピックをインスパイアしており、略称「みつぽ」を組み合わせたデザインとなりました。</p>
             <div class="img-area">
-                <img src="/public/images/project/cafe_page/3_1.png">
+                <img src="/images/project/cafe_page/3_1.png">
             </div>
 
             <h3>４　チームの一員として頑張ったこと</h3>
@@ -45,21 +45,21 @@
             <p>特に<span class="span-pink">ユーザビリティを重視</span>して作ったのでシンプルで使いやすくなりました！</p>
             <p>Home画面ではJ号館とZ号館の混雑度を同時に見れ、詳細画面では5分後までの混雑度を一覧で見ることができます。</p>
             <div class="img-area">
-                <img src="/public/images/project/cafe_page/4_1.png">
+                <img src="/images/project/cafe_page/4_1.png">
             </div>
             <p>MyPgaeでは、<span class="span-pink">Googleログイン</span>でユーザーを判定し、現在のポイントの確認や100円割引の予約を行うことができます。予約完了画面では、リアルタイムで利用状況を判断しています。</p>
             <div class="img-area">
-                <img src="/public/images/project/cafe_page/4_2.png">
+                <img src="/images/project/cafe_page/4_2.png">
             </div>
             <p><span class="span-pink">ポイントを貯める楽しさをさらに向上させるため、ランキング機能を実装しました。</span>また、プロモーションコードを利用することでポイントを獲得できるようにしました！</p>
             <div class="img-area">
-                <img src="/public/images/project/cafe_page/4_3.png">
+                <img src="/images/project/cafe_page/4_3.png">
             </div>
 
             <h3>５　キャラクターについて</h3>
             <p>このアプリの初期キャラは以下のキャラクターでした。しかし、学科主任からロリキャラがダメだと言われ泣く泣くキャラクターの作成を同学年の人に書いてもらいました。</p>
             <div class="img-area">
-                <img src="/public/images/project/cafe_page/5_1.png">
+                <img src="/images/project/cafe_page/5_1.png">
             </div>
             <p class="title-area">「みつくま」(3密ポイント公式)</p>
 
@@ -67,7 +67,7 @@
             <p>電ch! VTuber projectのOECU放送局にてVTuberの方と「3密ポイント」の紹介をYouTubeLIVE配信を行いました！</p>
             <p>スライドを使いプロジェクトについてより詳しく知ってもらえるように紹介しました。<span class="span-pink">モバイル画面の説明では自分も登場しています。</span></p>
             <div class="img-area">
-                <img src="/public/images/project/cafe_page/6_1.png">
+                <img src="/images/project/cafe_page/6_1.png">
             </div>
             <h4>アーカイブはこちら</h4>
             <div class="img-area">

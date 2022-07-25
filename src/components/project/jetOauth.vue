@@ -16,22 +16,22 @@
             </div>
             <p>複数のAuth認証をスピーディーに実装できる利点があります。</p>
             <div class="img-area">
-                <img src="/public/images/project/jetOauth/1_1.png">
+                <img src="/images/project/jetOauth/1_1.png">
             </div>
             <div class="img-area">
-                <img src="/public/images/project/jetOauth/1_2.png">
+                <img src="/images/project/jetOauth/1_2.png">
             </div>
 
             <h3>２　対応プロバイダーについて</h3>
             <p>GoogleやTwitterなど様々なプロバイダーに対応しました！<sapn class="span-pink">私はLINEとGitHubを担当しました。</sapn></p>
             <div class="img-area">
-                <img src="/public/images/project/jetOauth/2_1.png">
+                <img src="/images/project/jetOauth/2_1.png">
             </div>
 
             <h3>３　導入ツールについて</h3>
             <p>GitHubとVScodeを利用し開発しました。</p>
             <div class="img-area">
-                <img src="/public/images/project/jetOauth/3_1.png">
+                <img src="/images/project/jetOauth/3_1.png">
             </div>
         </div>
     </div>

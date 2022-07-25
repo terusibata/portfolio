@@ -17,14 +17,14 @@
                             <p>{{data.charge}}</p>
                         </div>
                         <div class="margin-top-10px">
-                            <h3>　<font-awesome-icon icon="fa-brands fa-laravel" /> 使用技術</h3>
+                            <h3>　<font-awesome-icon icon="fa-solid fa-gears" /> 使用技術</h3>
                             <p>{{data.technology}}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="detail-area">
-                <h3>　<font-awesome-icon icon="fa-brands fa-stack-overflow" /> 概要</h3>
+                <h3>　<font-awesome-icon icon="fa-solid fa-book-bookmark" /> 概要</h3>
                 <p>{{data.detail}}</p>
             </div>
             <div class="button-area">

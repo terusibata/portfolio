@@ -11,19 +11,19 @@
             <h3>２　Webサイトについて</h3>
             <p>フレームワークは<span class="span-pink">Vue.js</span>を使いました。大学の学生のみが利用できるようにGoogleログイン方式にしました。</p>
             <div class="img-area">
-                <img src="/public/images/project/OECU_Project/2_1.png">
+                <img src="/images/project/OECU_Project/2_1.png">
             </div>
             <p>プロジェクト募集は、プロジェクト作成から簡単に行うことができます。</p>
             <div class="img-area">
-                <img src="/public/images/project/OECU_Project/2_2.png">
+                <img src="/images/project/OECU_Project/2_2.png">
             </div>
             <p>プロジェクトの詳細情報の入力は、エディタ画面で自由に編集できます。オリジナルの紹介をすることができます！</p>
             <div class="img-area">
-                <img src="/public/images/project/OECU_Project/2_3.png">
+                <img src="/images/project/OECU_Project/2_3.png">
             </div>
             <p>MyPageで参加プロジェクトを確認できます。</p>
             <div class="img-area">
-                <img src="/public/images/project/OECU_Project/2_4.png">
+                <img src="/images/project/OECU_Project/2_4.png">
             </div>
         </div>
     </div>

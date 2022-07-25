@@ -8,10 +8,10 @@
 		</div>
 	</div>
 	<div v-if="scrollHeader" @click="scrollTop" class="return-button-area">
-		<img src="/public/images/mitukuma_top.png">
+		<img src="/images/mitukuma_top.png">
 	</div>
 	<div v-else @click="goProject" class="return-button-area">
-		<img src="/public/images/mitukuma_return.png">
+		<img src="/images/mitukuma_return.png">
 	</div>
 </template>
 

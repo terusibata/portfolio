@@ -2,7 +2,7 @@
     <Card>
         <div class="flex">
             <div class="img-area">
-                <img src="/public/images/terusibata.png">
+                <img src="/images/terusibata.png">
             </div>
             <div class="text-area">
                 <div class="text-area-padding">
