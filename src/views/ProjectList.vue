@@ -4,6 +4,9 @@
 	  	<div v-for="project in project_list">
 			<projectCard :data="project"></projectCard>
 		</div>
+		<div v-for="qiita in Qiita_list">
+			<Qiitacard :data="qiita"></Qiitacard>
+		</div>
       </div>
     </div>
 	<div v-if="scrollHeader" @click="scrollTop" class="return-button-area">
@@ -14,6 +17,7 @@
 <script setup>
 import {onBeforeMount, ref, defineProps, onMounted} from 'vue'
 import projectCard from "../components/project/Project_card.vue"
+import Qiitacard from "../components/project/Qiita-card.vue"
 
 const props = defineProps({
     id: {
@@ -54,6 +58,29 @@ const project_list = ref([
 		technology:"HTML, CSS, JavaScript",
 		detail:"有名な技術サイトであるQiitaをターゲットに実際に「うごいた」記事を共有できる Chrome 拡張機能を開発した。",
 		id:"ugoiita-code"
+	},
+	{
+		title:"∞ピクチャ",
+		img:"/images/project/list/unlimit-picture.png",
+		charge:"フロントエンド",
+		technology:"Vue.js",
+		detail:"画像を無限にアップロードできるWebアプリ",
+		id:"unlimit-picture"
+	}
+])
+
+const Qiita_list = ref([
+	{
+		title:"notion-py 使ってみた",
+		img:"/images/project/list/notion-py.png",
+		detail:"notion-py（非公式）についての記事を調べても日本語で書かれていることが少ないんですよね。自分が使ってみたことをまとめて置きます！",
+		link:"https://qiita.com/terusibata/items/aef67a87a5dd2bb3f7f6"
+	},
+	{
+		title:"Notion API 使ってみた",
+		img:"/images/project/list/notion_API.png",
+		detail:"Notion API(公式のもの)を使って何か作りたいということで、Twitterのトレンドを取得して、トレンドのキーワードに関連するツイートを保存するプログラムを作りました。",
+		link:"https://qiita.com/terusibata/items/57fbacf522e101b6a264"
 	}
 ])
 

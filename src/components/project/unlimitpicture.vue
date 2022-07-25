@@ -1,23 +1,18 @@
 <template>
     <div class="detail-area">
         <div class="title-area">
-            <h1>ugoiita-code</h1>
+            <h1>∞ピクチャ</h1>
         </div>
         <div class="body-area">
-            <h3>１　ugoiita-codeとは</h3>
-            <p>最新の「うごいた」日時がQiita記事内に表示され、「うごいた」ボタンを押すと OS や言語など詳しい動作環境を記入し報告することができる。</p>
-            <p>JPHACKSで実際に作成しました。Chrome 拡張機能は以下のリンクから確認することができます。</p>
+            <h3>１　∞ピクチャとは</h3>
+            <p>画像を無限にアップロードできるwebアプリです。スクリーンショットを直接アップロードでき、かつフォルダ整理できるようにするために開発しました。</p>
 
-            <div class="title-area" style="margin-bottom:10px;">
-                <a href="https://chrome.google.com/webstore/detail/ugoiita-code/jgbhfiidpomofdgpcjbjbiaedmnfkafa?hl=ja&authuser=0" target="_blank" rel="noopener noreferrer">
-                    <Button class="Chrome-button"><font-awesome-icon icon="fa-brands fa-chrome" /> chrome ウェブストア</Button>
-                </a>
+            <h3>２　Webアプリについて</h3>
+            <p>独学にて友人3人と行い、クライアント部分を担当しました。<span class="span-pink">フレームワークはVue.jsを使いました。</span></p>
+            <div class="img-area">
+                <img src="/images/project/list/unlimit-picture.png">
             </div>
-
-            <h4>説明動画</h4>
-            <div class="iframe-area">
-                <iframe src="https://www.youtube.com/embed/4ySAHkrszEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <p>友人同士のみでの利用を想定しているため、IDとパスワードを入力する方式でログインできるように実装しました。</p>
         </div>
     </div>
 </template>
@@ -29,23 +24,6 @@ import {onBeforeMount, ref, defineProps} from 'vue'
 </script>
 
 <style scoped>
-.Chrome-button{
-    background-color:#24292E;
-    color:white;
-    margin-right:5px;
-}
-.iframe-area{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.iframe-area iframe{
-    width:90%;
-    aspect-ratio:16/9;
-    margin-bottom:10px;
-}
-
-
 .detail-area{
     width:90%;
 }
