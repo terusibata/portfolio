@@ -1,6 +1,6 @@
 <template>
     <Card>
-        <div class="flex">
+        <div class="flex mobile-block">
             <div class="img-area">
                 <img src="/images/terusibata.png">
             </div>
@@ -76,4 +76,27 @@ h3{
     color:white;
 }
 
+@media screen and (max-width: 770px){
+    .mobile-block{
+        display:block;
+    }
+    .img-area{
+        width:100%;
+    }
+    .img-area img{
+        width:150px;
+    }
+    .text-area{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+    }
+    .button-area{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 </style>

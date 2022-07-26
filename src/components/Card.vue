@@ -25,4 +25,11 @@
     border-bottom: 2px rgba(40,40,40,0.35) solid;
     border-right: 2px rgba(40,40,40,0.35) solid;
 }
+
+@media screen and (max-width: 770px){
+    .glass-container{
+        width: 90vw;
+        height: 500px;
+    }
+}
 </style>

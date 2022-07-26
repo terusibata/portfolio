@@ -26,6 +26,7 @@
             </div>
         </div>
     </header>
+    <div v-if="mobile_menu" @click="closeMenu_first" class="mobile-menu-area-background"></div>
     <div v-if="mobile_menu" class="mobile-menu-area">
         <div>
             <div class="mobile-img-area">
@@ -87,6 +88,13 @@ function closeMenu(){
     }
     ,400);
 }
+function closeMenu_first(){
+    let elements = document.getElementsByClassName('active');
+    if(elements[0]){
+        elements[0].classList.remove('active');
+        mobile_menu.value = false
+    }
+}
 
 function goPage(page){
     console.log(page)
@@ -103,8 +111,16 @@ function goPage(page){
         default:
             router.push("/notFound");
     }
-    closeMenu()
+    closeMenu_first()
 }
+
+window.onresize = function () {
+  var windowSize = window.innerWidth;
+
+  if (windowSize > 770) {
+    closeMenu_first()
+  } 
+};
 
 </script>
 <style scoped>
@@ -305,11 +321,25 @@ a{
     width: 30%;
 }
 
+.mobile-menu-area-background{
+    z-index:10000;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0, 0.2);
+    -ms-user-select: none; /* IE 10+ */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 .mobile-menu-area{
     position: fixed;
     inset: 0;
     margin: auto;
-    z-index:10000;
+    z-index:10001;
     width: 80vw;
     height: 500px;
     display: flex;
@@ -325,7 +355,7 @@ a{
     border-right: 2px rgba(40,40,40,0.35) solid;
 }
 .mobile-img-area{
-    margin-top:5%;
+    margin-top:10%;
     height:auto;
 }
 .mobile-img-area img{
@@ -350,6 +380,9 @@ a{
 }
 .mobile-button-area .button{
     margin:15% 0;
+}
+.mobile-button-area .button p{
+    color:white;
 }
 
 @media screen and (max-width: 770px){
