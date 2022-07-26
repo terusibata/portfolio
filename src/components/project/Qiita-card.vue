@@ -76,11 +76,11 @@ h1{
     font-size:30px;
     padding:0 20px;
     margin-top:0;
-    color: #6cb4e4;
-    border-top: solid 2px #6cb4e4;
-    border-bottom: solid 2px #6cb4e4;
-    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
-    background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    color: #55C500;
+    border-top: solid 2px #55C500;
+    border-bottom: solid 2px #55C500;
+    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#E0F4E3 3px, #E0F4E3 7px);
+    background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#E0F4E3 3px, #E0F4E3 7px);
 }
 h3{
     color:white;

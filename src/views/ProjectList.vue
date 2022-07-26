@@ -1,11 +1,23 @@
 <template>
     <div class="project-list-area">
       <div class="Card-area">
+		<div class="img-area">
+	  		<img src="/images/project/team.png">
+		</div>
 	  	<div v-for="project in project_list">
 			<projectCard :data="project"></projectCard>
 		</div>
+		<div class="img-area">
+	  		<img src="/images/project/posting.png">
+		</div>
 		<div v-for="qiita in Qiita_list">
 			<Qiitacard :data="qiita"></Qiitacard>
+		</div>
+		<div class="img-area">
+	  		<img src="/images/project/study_meeting.png">
+		</div>
+		<div class="img-area">
+	  		<img src="/images/project/original.png">
 		</div>
       </div>
     </div>
@@ -125,5 +137,12 @@ onMounted(() => {
 }
 .return-button-area img{
 	width:100px;
+}
+.img-area{
+	max-width:700px;
+	margin-bottom:30px;
+}
+.img-area img{
+	width:100%;
 }
 </style>
