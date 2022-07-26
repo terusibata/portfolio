@@ -2,22 +2,30 @@
     <div class="project-list-area">
       <div class="Card-area">
 		<div class="img-area">
-	  		<img src="/images/project/team.png">
+			<div class="img-area-div">
+	  			<img src="/images/project/team.png">
+			</div>
 		</div>
 	  	<div v-for="project in project_list">
 			<projectCard :data="project"></projectCard>
 		</div>
 		<div class="img-area">
-	  		<img src="/images/project/posting.png">
+			<div class="img-area-div">
+	  			<img src="/images/project/posting.png">
+			</div>
 		</div>
 		<div v-for="qiita in Qiita_list">
 			<Qiitacard :data="qiita"></Qiitacard>
 		</div>
 		<div class="img-area">
-	  		<img src="/images/project/study_meeting.png">
+			<div class="img-area-div">
+	  			<img src="/images/project/study_meeting.png">
+			</div>
 		</div>
 		<div class="img-area">
-	  		<img src="/images/project/original.png">
+			<div class="img-area-div">
+	  			<img src="/images/project/original.png">
+			</div>
 		</div>
       </div>
     </div>
@@ -144,5 +152,16 @@ onMounted(() => {
 }
 .img-area img{
 	width:100%;
+}
+
+@media screen and (max-width: 770px){
+	.img-area{
+		display:flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.img-area-div{
+		width:90vw;
+	}
 }
 </style>

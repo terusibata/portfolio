@@ -20,6 +20,10 @@
                             <h3>　<font-awesome-icon icon="fa-solid fa-gears" /> 使用技術</h3>
                             <p>{{data.technology}}</p>
                         </div>
+                        <div class="mobile-detail-area margin-top-10px">
+                            <h3>　<font-awesome-icon icon="fa-solid fa-book-bookmark" /> 概要</h3>
+                            <p>{{data.detail}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,7 +72,7 @@ p{
 }
 .glass-container{
     width: 700px;
-    height: 460px;
+    min-height: 460px;
     color: white;
     display: flex;
     justify-content: center;
@@ -164,5 +168,37 @@ p,h3{
 .button-area Button{
     background-color:#034FBC;
     color:white;
+}
+.mobile-detail-area{
+    display:none;
+}
+
+@media screen and (max-width: 770px){
+    h1{
+        margin-top:20px;
+        font-size:25px;
+    }
+    .body-area{
+        display:block;
+    }
+    .img-area{
+        width:100%;
+    }
+    .comment-area{
+        margin:30px 0;
+        width:80vw;
+    }
+    .glass-container{
+        width:100%;
+    }
+    .detail-area{
+        display:none;
+    }
+    .mobile-detail-area{
+        display:block;
+    }  
+    .button-area{
+        margin-bottom:20px;
+    }     
 }
 </style>

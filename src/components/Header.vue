@@ -31,9 +31,21 @@
             <div class="mobile-img-area">
                 <img src="/images/mobile_menu.png">
             </div>
-
             <div class="mobile-button-area">
-                <Button @click="closeMenu">閉じる</Button>
+                <div>
+                    <div @click="goPage('home')" class="button">
+                        <p><font-awesome-icon icon="house" /> ホーム</p>
+                    </div>
+                    <div @click="goPage('about')" class="button">
+                        <p><font-awesome-icon icon="user" /> 私について</p>
+                    </div>
+                    <div @click="goPage('projectlist')" class="button">
+                        <p><font-awesome-icon icon="book" /> プロジェクト</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-close-area">
+                <Button @click="closeMenu"><font-awesome-icon icon="fa-regular fa-circle-xmark" /> 閉じる</Button>
             </div>
         </div>
     </div>
@@ -41,7 +53,7 @@
 
 <script setup>
 import Button from "./Button.vue"
-import { ref, defineProps } from "vue";
+import { ref } from "vue";
 import {useRouter, useRoute} from "vue-router";
 const isLoading = ref(true)
 const router = useRouter()
@@ -68,8 +80,10 @@ function openMenu(e){
 function closeMenu(){
     setTimeout(function(){
         let elements = document.getElementsByClassName('active');
-        elements[0].classList.remove('active');
-        mobile_menu.value = false
+        if(elements[0]){
+            elements[0].classList.remove('active');
+            mobile_menu.value = false
+        }
     }
     ,400);
 }
@@ -89,6 +103,7 @@ function goPage(page){
         default:
             router.push("/notFound");
     }
+    closeMenu()
 }
 
 </script>
@@ -176,7 +191,12 @@ a{
     background: rgba(255,255,255, 0.25);
     box-shadow: rgba(0, 0, 0, 0.7) 2px 4px 4px;
     cursor: pointer;
-    transform: skew(-10deg)
+    transform: skew(-10deg);
+    -ms-user-select: none; /* IE 10+ */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 .button:active{
     box-shadow:none
@@ -290,8 +310,8 @@ a{
     inset: 0;
     margin: auto;
     z-index:10000;
-    width: 90vw;
-    height: 80vh;
+    width: 80vw;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,16 +325,31 @@ a{
     border-right: 2px rgba(40,40,40,0.35) solid;
 }
 .mobile-img-area{
+    margin-top:5%;
     height:auto;
 }
 .mobile-img-area img{
     width:250px;
+}
+.mobile-close-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+}
+.mobile-close-area Button{
+    background-color:#24292E;
+    color:white;
 }
 .mobile-button-area{
     display: flex;
     justify-content: center;
     align-items: center;
     height:auto;
+    margin-bottom:15%;
+}
+.mobile-button-area .button{
+    margin:15% 0;
 }
 
 @media screen and (max-width: 770px){

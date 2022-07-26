@@ -46,7 +46,7 @@ p{
 }
 .glass-container{
     width: 700px;
-    height: 380px;
+    min-height: 380px;
     color: white;
     display: flex;
     justify-content: center;
@@ -133,5 +133,28 @@ p,h3{
 .button-area Button{
     background-color:#55C500;
     color:white;
+}
+
+@media screen and (max-width: 770px){
+    h1{
+        margin-top:20px;
+        font-size:25px;
+    }
+    .body-area{
+        display:block;
+    }
+    .img-area{
+        width:100%;
+    }
+    .comment-area{
+        margin:30px 0;
+        width:80vw;
+    }
+    .glass-container{
+        width:100%;
+    }
+    .button-area{
+        margin-bottom:20px;
+    }  
 }
 </style>
