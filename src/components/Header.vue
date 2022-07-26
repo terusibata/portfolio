@@ -376,13 +376,20 @@ a{
     justify-content: center;
     align-items: center;
     height:auto;
-    margin-bottom:15%;
+    margin-bottom:5%;
 }
 .mobile-button-area .button{
     margin:15% 0;
+    width:150px;
+    height:50px;
+    background-color: rgba(255,255,255, 0.5);
+    color:black;
 }
 .mobile-button-area .button p{
-    color:white;
+    font-size:18px;
+}
+.mobile-button-area .button:hover{
+    background-color: #034FBC;
 }
 
 @media screen and (max-width: 770px){
