@@ -18,7 +18,7 @@
 
 <script setup>
 import {useRouter, useRoute} from "vue-router";
-import {onBeforeMount, ref, defineProps, onMounted} from 'vue'
+import {onBeforeMount, ref, onMounted} from 'vue'
 import projectCard from "../components/project/Project_card.vue"
 import cafepage from "../components/project/cafe_page.vue"
 import jetOauth from "../components/project/jetOauth.vue"

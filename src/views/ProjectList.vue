@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import {onBeforeMount, ref, defineProps, onMounted} from 'vue'
+import {onBeforeMount, ref, onMounted} from 'vue'
 import projectCard from "../components/project/Project_card.vue"
 import Qiitacard from "../components/project/Qiita-card.vue"
 
