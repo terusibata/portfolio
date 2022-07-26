@@ -16,6 +16,10 @@
             <div class="img-area">
                 <img src="/images/project/cafe_page/1_2.png">
             </div>
+            <h4>混雑度予報プロジェクト　〜説明動画〜</h4>
+            <div class="iframe-area">
+                <iframe src="https://www.youtube.com/embed/arrfuXJt28c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
             <h3>２　混雑度を自主的に緩和するには</h3>
             <p>混雑度を表示するだけでは、自主的に混雑を避けようとする人は稀であると考えました。広告で「混雑を避けましょう」と書いてもほとんど意味を成しません。</p>
@@ -26,9 +30,13 @@
             <div class="img-area">
                 <img src="/images/project/cafe_page/2_1.jpeg">
             </div>
+            <h4>3密ポイント「サービス紹介」</h4>
+            <div class="iframe-area">
+                <iframe src="https://www.youtube.com/embed/yXa9ohTSqAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <p>本大学で初めて学部1・2年生(全24名)が自主的に大学で大規模に使われるシステムを作る前例を作りました。 </p>
 
-            <h3>３　「3密ポイント」、略称「みつぽ」を命名しました</h3>
+            <h3>３　「3密ポイント」を命名しました</h3>
             <p>新型コロナウイルスにより、「3密」を避けることが大事だとニュースで報道されているのを見て、3密を避けたら得をするにはどうすればいいかを考えたときにポイントを付与すればいいという発想になったことから、<span class="span-pink">「3密ポイント」</span>と提案しました。</p>
             <p>ロゴはチームリーダーがオリンピックをインスパイアしており、略称「みつぽ」を組み合わせたデザインとなりました。</p>
             <div class="img-area">
@@ -80,6 +88,12 @@
             <a href="https://www.osakac.ac.jp/corp/univnews/pdf/gakuhou341.pdf" target="_blank" rel="noopener noreferrer">
                 <div class="link-preview">
                     <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /> 情報工学科1・2年生が学内食堂の混雑予報システムを開発
+                </div>
+            </a>
+            <p><font-awesome-icon icon="fa-solid fa-bookmark" /> 大阪電気通信大学 公式サイト プレスリリース </p>
+            <a href="https://www.osakac.ac.jp/news/2021/2395" target="_blank" rel="noopener noreferrer">
+                <div class="link-preview">
+                    <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /> 情報工学科1・2年生の学生有志が学内食堂の混雑緩和を目的としたアプリを開発しました
                 </div>
             </a>
             <h4>【新聞】</h4>

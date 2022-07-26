@@ -328,7 +328,7 @@ a{
     margin: auto;
     width:100vw;
     height:100vh;
-    background-color: rgba(0,0,0, 0.2);
+    background-color: rgba(0,0,0, 0.1);
     -ms-user-select: none; /* IE 10+ */
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
@@ -353,6 +353,11 @@ a{
     border: 2px rgba(255,255,255,0.4) solid;
     border-bottom: 2px rgba(40,40,40,0.35) solid;
     border-right: 2px rgba(40,40,40,0.35) solid;
+    -ms-user-select: none; /* IE 10+ */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 .mobile-img-area{
     margin-top:10%;
