@@ -4,7 +4,20 @@
             <div>
                 <h1>開発経験<span>Development Experience</span></h1>
 
-
+                <div class="development-flex-area">
+                    <div class="flex-area mobile-block">
+                        <ul class="development-area">
+                            <li class="development-text"><font-awesome-icon icon="fa-brands fa-python" /> Python</li>
+                            <li class="development-text"><font-awesome-icon icon="fa-brands fa-js" /> JavaScript</li>
+                            <li class="development-text">C++</li>
+                        </ul>
+                        <ul class="development-area">
+                            <li class="development-text"><font-awesome-icon icon="fa-brands fa-html5" /> HTML</li>
+                            <li class="development-text"><font-awesome-icon icon="fa-brands fa-css3-alt" /> CSS</li>
+                            <li class="development-text"><font-awesome-icon icon="fa-brands fa-vuejs" /> Vue.js</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <h1>学歴<span>Academic background</span></h1>
                 <div class="academic-area">
@@ -13,9 +26,11 @@
                             <p class="time">2017</p>
                             <p class="flag">近畿大学泉州高等学校</p>
                         </div>
-                        <div class="homepage-button">
-                            <Button><font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /> ホームページ</Button>
-                        </div>
+                        <a href="https://www.kindai-sensyu.ed.jp/" target="_blank" rel="noopener noreferrer">
+                            <div class="homepage-button">
+                                <Button><font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /> ホームページ</Button>
+                            </div>
+                        </a>
                     </div>
 
                     <div class="timeline_item">
@@ -23,9 +38,11 @@
                             <p class="time">2020</p>
                             <p class="flag">大阪電気通信大学 情報通信工学部 情報工学科</p>
                         </div>
-                        <div class="homepage-button">
-                            <Button><font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /> ホームページ</Button>
-                        </div>
+                        <a href="https://www.osakac.ac.jp/" target="_blank" rel="noopener noreferrer">
+                            <div class="homepage-button">
+                                <Button><font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /> ホームページ</Button>
+                            </div>
+                        </a>
                     </div>
                 </div>
             
@@ -102,6 +119,7 @@ onMounted(() => {
 	bottom:0;
 	right:0;
 	cursor: pointer;
+    z-index:5;
 }
 .return-button-area img{
 	width:100px;
@@ -114,6 +132,9 @@ h1 {
     position: relative;
     margin-bottom:40px;
     color:white;
+    line-height:0.95em;
+	text-shadow: 
+		0 0.05em 0.08em rgba(0,0,0,0.7);
 }
 h1::before {
     position: absolute;
@@ -131,6 +152,59 @@ h1 span {
     margin-top: 5px;
 }
 
+
+.development-flex-area{
+    width:80%;
+    margin:auto;
+}
+.development-area{
+    padding: 0;
+    width:50%;
+    list-style: none;
+    text-align:center;
+}
+.development-area li{
+    position: relative;
+    padding: 0.5em 1em 0.5em 2.3em;
+    margin-bottom:5px;
+    color: #034FBC;
+    font-size: 18px;
+    font-weight: bold;
+	text-shadow: 
+		0 0.05em 0.08em rgba(0,0,0,0.5);
+}
+.development-area li:after,
+.development-area li:before{
+    content: "";
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.development-area li:before{
+    top: 0.7em;
+    left: 0.2em;
+    width: 12px;
+    height: 12px;
+    border:2px solid rgb(3, 79, 188,0.8);
+}
+.development-area li:after{
+    top: 0.9em;
+    left: 0.7em;
+    width: 14px;
+    height: 14px;
+    background: rgb(3, 79, 188,0.3);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+.development-text{
+    white-space: nowrap;
+}
 
 .academic-area {
 	position: relative;
@@ -199,5 +273,8 @@ h1 span {
 	.about-area{
 		width:90vw;
 	}
+    .mobile-block{
+        display:block;
+    }
 }
 </style>

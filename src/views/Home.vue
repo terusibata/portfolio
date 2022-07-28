@@ -9,7 +9,9 @@
                     <h1>terusibata</h1>
                     <h3>チームで勉強会やプロジェクトを行っています。</h3>
                     <div class="flex button-area">
-                        <a href="https://twitter.com/Terusibata"><Button class="Twitter-button"><font-awesome-icon icon="fa-brands fa-twitter" /> Twitter</Button></a>
+                        <a href="https://twitter.com/Terusibata" target="_blank" rel="noopener noreferrer">
+                            <Button class="Twitter-button"><font-awesome-icon icon="fa-brands fa-twitter" /> Twitter</Button>
+                        </a>
                         <Button class="GitHub-button"><font-awesome-icon icon="fa-brands fa-github" /> GitHub</Button>
                         <Button class="Youtube-button"><font-awesome-icon icon="fa-brands fa-youtube" /> Youtube</Button>
                     </div>
@@ -31,7 +33,8 @@ import Button from "../components/Button.vue"
 
 h1,h3{
     font-family: "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
-    text-shadow: 1px 1px 0 rgba(0,0,0,.6);
+	text-shadow: 
+		0 0.05em 0.08em rgba(0,0,0,0.7);
     font-size:40px;
 }
 h1{

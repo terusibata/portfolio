@@ -182,10 +182,15 @@ header{
     gap: 20px;
 }
 a{
-    font-family: "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
-    text-decoration: none;
-    color: white;
-    text-shadow: 3px 3px 3px black;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	color: transparent;
+	background : rgba(0,0,0,1);
+	text-shadow : 
+		0 0 0.1em rgba(255,255,255,0.05),
+		0.01em 0.04em 0.03em rgba(255,255,255,0.4);
+	-webkit-background-clip : text;
 }
 .flex{
     display: flex;
@@ -328,7 +333,10 @@ a{
     margin: auto;
     width:100vw;
     height:100vh;
-    background-color: rgba(0,0,0, 0.1);
+    background-image   : radial-gradient(rgba(255,255,255, 0.4) 23%, transparent 29%),
+                        radial-gradient(rgba(255,255,255, 0.4) 23%, transparent 29%);
+    background-position: 0 0, 3px 3px;
+    background-size    : 6px 6px;
     -ms-user-select: none; /* IE 10+ */
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
@@ -406,9 +414,6 @@ a{
     }
     header{
         height:50px;
-    }
-    h1{
-        margin:0;
     }
 }
 </style>

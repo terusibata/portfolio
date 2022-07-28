@@ -142,6 +142,7 @@ onMounted(() => {
 	bottom:0;
 	right:0;
 	cursor: pointer;
+	z-index:5;
 }
 .return-button-area img{
 	width:100px;

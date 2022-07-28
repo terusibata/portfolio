@@ -29,5 +29,7 @@ footer{
     border: 2px rgba(255,255,255,0.4) solid;
     border-bottom: 2px rgba(40,40,40,0.35) solid;
     border-right: 2px rgba(40,40,40,0.35) solid;
+	text-shadow: 
+		0 0.05em 0.08em rgba(0,0,0,0.7);
 }
 </style>
