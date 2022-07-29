@@ -22,6 +22,9 @@
 	  			<img src="/images/project/study_meeting.png">
 			</div>
 		</div>
+		<div v-for="study_meeting in study_meeting_list">
+			<studymeetingcard :data="study_meeting"></studymeetingcard>
+		</div>
 		<div class="img-area">
 			<div class="img-area-div">
 	  			<img src="/images/project/original.png">
@@ -37,7 +40,8 @@
 <script setup>
 import {onBeforeMount, ref, onMounted} from 'vue'
 import projectCard from "../components/project/Project_card.vue"
-import Qiitacard from "../components/project/Qiita-card.vue"
+import Qiitacard from "../components/project/Qiita_card.vue"
+import studymeetingcard from "../components/project/study_meeting_card.vue"
 
 const props = defineProps({
     id: {
@@ -101,6 +105,21 @@ const Qiita_list = ref([
 		img:"/images/project/list/notion_API.png",
 		detail:"Notion API(公式のもの)を使って何か作りたいということで、Twitterのトレンドを取得して、トレンドのキーワードに関連するツイートを保存するプログラムを作りました。",
 		link:"https://qiita.com/terusibata/items/57fbacf522e101b6a264"
+	}
+])
+
+const study_meeting_list = ref([
+	{
+		title:"LINE bot 勉強会",
+		img:"/images/project/list/notion-py.png",
+		detail:"notion-py（非公式）についての記事を調べても日本語で書かれていることが少ないんですよね。自分が使ってみたことをまとめて置きます！",
+		id:"LINE-bot"
+	},
+	{
+		title:"Python 勉強会",
+		img:"/images/project/list/notion_API.png",
+		detail:"Notion API(公式のもの)を使って何か作りたいということで、Twitterのトレンドを取得して、トレンドのキーワードに関連するツイートを保存するプログラムを作りました。",
+		id:"Python"
 	}
 ])
 

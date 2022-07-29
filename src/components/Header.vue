@@ -1,6 +1,6 @@
 <template>
     <div class="background-img">
-        <img src="/images/background.jpeg">
+        <img src="/images/background0.jpeg">
     </div>
     <div :class="isLoading? 'loading': ''"></div>
     <header>

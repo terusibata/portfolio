@@ -36,6 +36,15 @@ const router =  createRouter({
                 title: "プロジェクト"  
             },
             component: () => import('./views/Project.vue')
+        },        
+        {
+            path: '/study_meeting/:id',
+            name: 'study_meeting',
+            props: true,
+            meta:{
+                title: "勉強会"  
+            },
+            component: () => import('./views/study_meeting.vue')
         },
         {
             path: `/:catchAll(.*)`,

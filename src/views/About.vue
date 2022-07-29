@@ -156,6 +156,14 @@ h1 span {
 .development-flex-area{
     width:80%;
     margin:auto;
+    gap: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    background: rgba(0,0,0,0.3);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
 }
 .development-area{
     padding: 0;
@@ -167,7 +175,7 @@ h1 span {
     position: relative;
     padding: 0.5em 1em 0.5em 2.3em;
     margin-bottom:5px;
-    color: #034FBC;
+    color: white;
     font-size: 18px;
     font-weight: bold;
 	text-shadow: 
@@ -188,14 +196,14 @@ h1 span {
     left: 0.2em;
     width: 12px;
     height: 12px;
-    border:2px solid rgb(3, 79, 188,0.8);
+    border:2px solid rgb(255, 255, 255, 0.8);
 }
 .development-area li:after{
     top: 0.9em;
     left: 0.7em;
     width: 14px;
     height: 14px;
-    background: rgb(3, 79, 188,0.3);
+    background: rgb(255, 255, 255, 0.3);
     -webkit-transform: rotate(60deg);
     -moz-transform: rotate(60deg);
     -o-transform: rotate(60deg);
@@ -204,6 +212,7 @@ h1 span {
 }
 .development-text{
     white-space: nowrap;
+    margin-left:20px;
 }
 
 .academic-area {
