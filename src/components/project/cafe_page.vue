@@ -123,7 +123,7 @@
 
 <script setup>
 import Button from "../Button.vue"
-import {onBeforeMount, ref, defineProps} from 'vue'
+import {onBeforeMount, ref} from 'vue'
 const link_list = ref([
     "https://japan.cnet.com/release/30601347/",
     "https://japan.zdnet.com/release/30601347/",
