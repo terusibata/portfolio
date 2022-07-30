@@ -39,9 +39,9 @@
 
 <script setup>
 import {onBeforeMount, ref, onMounted} from 'vue'
-import projectCard from "../components/project/Project_card.vue"
-import Qiitacard from "../components/project/Qiita_card.vue"
-import studymeetingcard from "../components/project/study_meeting_card.vue"
+import projectCard from "../components/Card/Project_card.vue"
+import Qiitacard from "../components/Card/Qiita_card.vue"
+import studymeetingcard from "../components/Card/study_meeting_card.vue"
 
 const props = defineProps({
     id: {

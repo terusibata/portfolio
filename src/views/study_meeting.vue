@@ -1,7 +1,7 @@
 <template>
 	<div class="flex-area">
 		<div class="project-area">
-
+			<LINEbot v-if="id == 'LINE-bot'"></LINEbot>
 		</div>
 	</div>
 	<div v-if="scrollHeader" @click="scrollTop" class="return-button-area">
@@ -15,7 +15,7 @@
 <script setup>
 import {useRouter, useRoute} from "vue-router";
 import {onBeforeMount, ref, onMounted} from 'vue'
-import projectCard from "../components/project/Project_card.vue"
+import LINEbot from "../components/study_meeting/LINE-bot.vue"
 
 const router = useRouter()
 const route = useRoute()
