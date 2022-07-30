@@ -1,7 +1,7 @@
 <template>
     <div class="project-list-area">
       <div class="Card-area">
-		<div class="img-area">
+		<div class="img-area" id="team">
 			<div class="img-area-div">
 	  			<img src="/images/project/team.png">
 			</div>
@@ -9,7 +9,7 @@
 	  	<div v-for="project in project_list">
 			<projectCard :data="project"></projectCard>
 		</div>
-		<div class="img-area">
+		<div class="img-area" id="posting">
 			<div class="img-area-div">
 	  			<img src="/images/project/posting.png">
 			</div>
@@ -17,7 +17,7 @@
 		<div v-for="qiita in Qiita_list">
 			<Qiitacard :data="qiita"></Qiitacard>
 		</div>
-		<div class="img-area">
+		<div class="img-area" id="study_meeting">
 			<div class="img-area-div">
 	  			<img src="/images/project/study_meeting.png">
 			</div>
@@ -25,7 +25,7 @@
 		<div v-for="study_meeting in study_meeting_list">
 			<studymeetingcard :data="study_meeting"></studymeetingcard>
 		</div>
-		<div class="img-area">
+		<div class="img-area" id="original">
 			<div class="img-area-div">
 	  			<img src="/images/project/original.png">
 			</div>
@@ -34,6 +34,25 @@
     </div>
 	<div v-if="scrollHeader" @click="scrollTop" class="return-button-area">
 		<img src="/images/mitukuma_top.png">
+	</div>
+	<div class="Table-of-Contents-area">
+		<div>
+			<div class="Table-of-Contents-img">
+				<img src="/images/mitukuma_table.png">
+			</div>
+			<div class="Table-of-Contents-list" @click="clickScroll('team')">
+				<img src="/images/project/team.png">
+			</div>
+			<div class="Table-of-Contents-list" @click="clickScroll('posting')">
+				<img src="/images/project/posting.png">
+			</div>
+			<div class="Table-of-Contents-list" @click="clickScroll('study_meeting')">
+				<img src="/images/project/study_meeting.png">
+			</div>
+			<div class="Table-of-Contents-list" @click="clickScroll('original')">
+				<img src="/images/project/original.png">
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -49,6 +68,30 @@ const props = defineProps({
         default: ""
     }
 })
+
+function clickScroll(id){
+	switch(id){
+		case "team":
+			var clientRect = document.getElementById('team').getBoundingClientRect() ;
+			break
+		case "posting":
+			var clientRect = document.getElementById('posting').getBoundingClientRect() ;
+			break
+		case "study_meeting":
+			var clientRect = document.getElementById('study_meeting').getBoundingClientRect() ;
+			break
+		case "original":
+			var clientRect = document.getElementById('original').getBoundingClientRect() ;
+			break
+		default:
+			console.log("その要素は存在しません")
+	}
+	var py = window.pageYOffset + clientRect.top - 100;
+	window.scrollTo({
+		top: py,
+		behavior:'smooth'
+	})
+}
 
 const project_list = ref([
 	{
@@ -174,6 +217,42 @@ onMounted(() => {
 	width:100%;
 }
 
+.Table-of-Contents-area{
+	position: fixed;
+	top:140px;
+	left:40px;
+    width: 300px;
+    height: 500px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255,255,255, 0.075);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+.Table-of-Contents-img img{
+	width:100%;
+}
+.Table-of-Contents-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-bottom:10px;
+	cursor: pointer;
+}
+.Table-of-Contents-list:active{
+	transform: scale(0.9);
+}
+.Table-of-Contents-list img{
+	width:90%;	
+}
+
 @media screen and (max-width: 770px){
 	.img-area{
 		display:flex;
@@ -182,6 +261,11 @@ onMounted(() => {
 	}
 	.img-area-div{
 		width:90vw;
+	}
+}
+@media screen and (max-width: 1480px){
+	.Table-of-Contents-area{
+		display:none;
 	}
 }
 </style>
