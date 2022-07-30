@@ -40,7 +40,7 @@
 
 <script setup>
 import Button from "../../components/Button.vue"
-import { reactive, ref, defineProps} from "vue";
+import { reactive, ref} from "vue";
 import {useRouter, useRoute} from "vue-router";
 const router = useRouter()
 

@@ -28,7 +28,7 @@
 
 <script setup>
 import Button from "../../components/Button.vue"
-import { reactive, ref, defineProps} from "vue";
+import { reactive, ref} from "vue";
 
 const props = defineProps({
     data: {

@@ -19,7 +19,7 @@
 
 <script setup>
 import Button from "../Button.vue"
-import {onBeforeMount, ref, defineProps} from 'vue'
+import {onBeforeMount, ref} from 'vue'
 
 </script>
 
