@@ -14,14 +14,16 @@
             <p></p>
 
             <h4>勉強会で使用した資料</h4>
-            <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
-    padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-    border-radius: 8px; will-change: transform;">
+            <div class="canva-iframe">
                 <iframe loading="lazy"
                     style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
                     src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEvVpOL3z0&#x2F;view?embed"
-                    allowfullscreen="allowfullscreen" allow="fullscreen">
+                    allowfullscreen="allowfullscreen" allow="fullscreen" onload="document.getElementById('loader-area').remove();">
                 </iframe>
+                <div id="loader-area">
+                    <p>Canvaを読み込んでいます...</p>
+                    <div class="loader"><span></span><span></span><span></span></div>
+                </div>
             </div>
 
             <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEvVpOL3z0&#x2F;view?utm_content=DAEvVpOL3z0&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener noreferrer">
@@ -45,11 +47,9 @@
 </template>
 
 <script setup>
-    import Button from "../Button.vue"
-    import {
-        onBeforeMount,
-        ref
-    } from 'vue'
+import Button from "../Button.vue"
+import {onBeforeMount, ref} from 'vue'
+
 </script>
 
 <style scoped>
@@ -182,5 +182,110 @@ a {
 
 .link-preview:active {
     box-shadow: none;
+}
+
+.canva-iframe{
+    position: relative; 
+    width: 100%; 
+    height: 0; 
+    padding-top: 56.2500%;
+    padding-bottom: 48px; 
+    box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
+    margin-top: 1.6em; 
+    margin-bottom: 0.9em; 
+    overflow: hidden;
+    border-radius: 8px; 
+    will-change: transform;
+}
+
+#loader-area{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.loader span{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 40%;
+    -webkit-animation: 3s infinite linear;
+    -moz-animation: 3s infinite linear;
+    -o-animation: 3s infinite linear;
+}
+.loader span:nth-child(2){
+    background:#E84C3D;
+    -webkit-animation:kiri 1.2s infinite linear;
+    -moz-animation:kiri 1.2s infinite linear;
+    -o-animation:kiri 1.2s infinite linear;
+}
+.loader span:nth-child(3){
+    background:#F1C40F;
+    z-index:100;
+}
+.loader span:nth-child(1){
+    background:#2FCC71;
+    -webkit-animation:kanan 1.2s infinite linear;
+    -moz-animation:kanan 1.2s infinite linear;
+    -o-animation:kanan 1.2s infinite linear;
+}
+@-webkit-keyframes kanan {
+    0% {-webkit-transform:translateX(20px);
+    }
+    50%{-webkit-transform:translateX(-20px);
+    }
+    100%{-webkit-transform:translateX(20px);
+    z-index:200;
+    }
+}
+@-moz-keyframes kanan {
+    0% {-moz-transform:translateX(20px);
+    }
+    50%{-moz-transform:translateX(-20px);
+    }
+    100%{-moz-transform:translateX(20px);
+    z-index:200;
+    }
+}
+@-o-keyframes kanan {
+    0% {-o-transform:translateX(20px);
+    }
+
+    50%{-o-transform:translateX(-20px);
+    }
+    100%{-o-transform:translateX(20px);
+    z-index:200;
+    }
+}
+@-webkit-keyframes kiri {
+    0% {-webkit-transform:translateX(-20px);
+    z-index:200;
+    }
+    50%{-webkit-transform:translateX(20px);
+    }
+    100%{-webkit-transform:translateX(-20px);
+    }
+}
+@-moz-keyframes kiri {
+    0% {-moz-transform:translateX(-20px);
+    z-index:200;
+    }
+    50%{-moz-transform:translateX(20px);
+    }
+    100%{-moz-transform:translateX(-20px);
+    }
+}
+@-o-keyframes kiri {
+    0% {-o-transform:translateX(-20px);
+    z-index:200;
+    }
+    50%{-o-transform:translateX(20px);
+    }
+    100%{-o-transform:translateX(-20px);
+    }
 }
 </style>
