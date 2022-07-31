@@ -1,8 +1,9 @@
 <template>
 	<div class="flex-area">
-		<div class="project-area">
+		<div v-if="!NotFound" class="project-area">
 			<LINEbot v-if="id == 'LINE-bot'"></LINEbot>
 		</div>
+		<NotFoundcard v-else :comment="'勉強会の記事'"></NotFoundcard>
 	</div>
 	<div v-if="scrollHeader" @click="scrollTop" class="return-button-area">
 		<img src="/images/mitukuma_top.png">
@@ -16,6 +17,7 @@
 import {useRouter, useRoute} from "vue-router";
 import {onBeforeMount, ref, onMounted} from 'vue'
 import LINEbot from "../components/study_meeting/LINE-bot.vue"
+import NotFoundcard from "../components/Card/NotFound_card.vue"
 
 const router = useRouter()
 const route = useRoute()
@@ -25,6 +27,7 @@ const props = defineProps({
         default: ""
     }
 })
+const NotFound = ref(false)
 
 const scrollHeader = ref(false)
 function showScrollTop() {
@@ -63,7 +66,9 @@ onBeforeMount(()=>{
 			document.title = `Python 勉強会 | terusibata`
 			break
 		default:
-			router.push("/notFound");
+			document.title = `勉強会の記事が見つかりません`
+			NotFound.value = true
+			break
 	}
 })
 </script>

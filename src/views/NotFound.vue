@@ -1,7 +1,7 @@
 <template>
-
+    <NotFoundcard></NotFoundcard>
 </template>
 
-<style scoped>
-
-</style>
+<script setup>
+import NotFoundcard from "../components/Card/NotFound_card.vue"
+</script>

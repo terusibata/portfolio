@@ -1,12 +1,13 @@
 <template>
 	<div class="flex-area">
-		<div class="project-area">
+		<div v-if="!NotFound" class="project-area">
 			<cafepage v-if="id == 'cafe_page'"></cafepage>
 			<jetOauth v-if="id == 'jetOauth'"></jetOauth>
 			<OECUProject v-if="id == 'OECU_Project'"></OECUProject>
 			<ugoiitacode v-if="id == 'ugoiita-code'"></ugoiitacode>
 			<unlimitpicture v-if="id == 'unlimit-picture'"></unlimitpicture>
 		</div>
+		<NotFoundcard v-else :comment="'チーム開発の記事'"></NotFoundcard>
 	</div>
 	<div v-if="scrollHeader" @click="scrollTop" class="return-button-area">
 		<img src="/images/mitukuma_top.png">
@@ -24,6 +25,7 @@ import jetOauth from "../components/project/jetOauth.vue"
 import OECUProject from "../components/project/OECU_Project.vue"
 import ugoiitacode from "../components/project/ugoiita-code.vue"
 import unlimitpicture from "../components/project/unlimitpicture.vue"
+import NotFoundcard from "../components/Card/NotFound_card.vue"
 
 const router = useRouter()
 const route = useRoute()
@@ -33,6 +35,7 @@ const props = defineProps({
         default: ""
     }
 })
+const NotFound = ref(false)
 
 const scrollHeader = ref(false)
 function showScrollTop() {
@@ -80,7 +83,9 @@ onBeforeMount(()=>{
 			document.title = `∞ピクチャ | terusibata`
 			break
 		default:
-			router.push("/notFound");
+			document.title = `チーム開発の記事が見つかりません`
+			NotFound.value = true
+			break
 	}
 })
 </script>
