@@ -23,7 +23,7 @@
             </div>
 
             <h3>２　対応プロバイダーについて</h3>
-            <p>GoogleやTwitterなど様々なプロバイダーに対応しました！<sapn class="span-pink">私はLINEとGitHubを担当しました。</sapn></p>
+            <p>GoogleやTwitterなど様々なプロバイダーに対応しました！<span class="span-pink">私はLINEとGitHubを担当しました。</span></p>
             <div class="img-area">
                 <img src="/images/project/jetOauth/2_1.png">
             </div>
