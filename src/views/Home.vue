@@ -12,10 +12,13 @@
                         <a href="https://twitter.com/Terusibata" target="_blank" rel="noopener noreferrer">
                             <Button class="Twitter-button"><font-awesome-icon icon="fa-brands fa-twitter" /> Twitter</Button>
                         </a>
-                        <Button class="GitHub-button"><font-awesome-icon icon="fa-brands fa-github" /> GitHub</Button>
-                        <Button class="Youtube-button"><font-awesome-icon icon="fa-brands fa-youtube" /> Youtube</Button>
+                        <a href="https://github.com/terusibata" target="_blank" rel="noopener noreferrer">
+                            <Button class="GitHub-button"><font-awesome-icon icon="fa-brands fa-github" /> GitHub</Button>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCA910n1MOVJVW6GQ8Wymwrg" target="_blank" rel="noopener noreferrer">
+                            <Button class="Youtube-button"><font-awesome-icon icon="fa-brands fa-youtube" /> Youtube</Button>
+                        </a>
                     </div>
-
                 </div>
             </div>
         </div>
