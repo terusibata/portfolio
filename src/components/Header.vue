@@ -100,13 +100,13 @@ function goPage(page){
     console.log(page)
     switch(page){
         case "home":
-            router.push("/");
+            router.push("/portfolio/");
             break;
         case "about":
-            router.push("/about");
+            router.push("/portfolio/about");
             break;
         case "projectlist":
-            router.push("/projectlist");
+            router.push("/portfolio/projectlist");
             break;
         default:
             router.push("/notFound");
