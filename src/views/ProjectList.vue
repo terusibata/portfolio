@@ -30,6 +30,9 @@
 	  			<img src="/images/project/original.png">
 			</div>
 		</div>
+		<div v-for="original in original_list">
+			<originalcard :data="original"></originalcard>
+		</div>
       </div>
     </div>
 	<div v-if="scrollHeader" @click="scrollTop" class="return-button-area">
@@ -61,6 +64,7 @@ import {onBeforeMount, ref, onMounted} from 'vue'
 import projectCard from "../components/Card/Project_card.vue"
 import Qiitacard from "../components/Card/Qiita_card.vue"
 import studymeetingcard from "../components/Card/study_meeting_card.vue"
+import originalcard from "../components/Card/original_card.vue"
 
 const props = defineProps({
     id: {
@@ -158,11 +162,20 @@ const study_meeting_list = ref([
 		detail:"LINE Bot を作るハンズオン勉強会を開催しました。今回は、しりとりを遊べるLINE Botを作りました。学生のみに囚われず、社会人の方々にもご参加頂きました。",
 		id:"LINE-bot"
 	},
+	// {
+	// 	title:"Python 勉強会",
+	// 	img:"/images/project/list/Python.png",
+	// 	detail:"Pythonの基礎的な文法を演習形式で行った勉強会です。今回は、問題の進捗が主催者にすぐ分かるオリジナルアプリで「何が分からないかが分からない」初心者に手厚く迅速なサポートができました。",
+	// 	id:"Python"
+	// }
+])
+
+const original_list = ref([
 	{
-		title:"Python 勉強会",
-		img:"/images/project/list/Python.png",
-		detail:"Pythonの基礎的な文法を演習形式で行った勉強会です。今回は、問題の進捗が主催者にすぐ分かるオリジナルアプリで「何が分からないかが分からない」初心者に手厚く迅速なサポートができました。",
-		id:"Python"
+		title:"ポートフォリオ",
+		img:"/images/project/list/portfolio.png",
+		detail:"チーム開発、投稿記事、勉強会などを紹介するWebページをVue.jsを使い作成しました。",
+		id:"portfolio"
 	}
 ])
 

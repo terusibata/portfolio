@@ -47,6 +47,15 @@ const router =  createRouter({
             component: () => import('./views/study_meeting.vue')
         },
         {
+            path: '/original/:id',
+            name: 'original',
+            props: true,
+            meta:{
+                title: "オリジナル作品"  
+            },
+            component: () => import('./views/original.vue')
+        },
+        {
             path: `/:catchAll(.*)`,
             name: 'notFound',
             meta:{
