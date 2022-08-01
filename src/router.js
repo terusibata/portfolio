@@ -3,7 +3,7 @@ const router =  createRouter({
     history: createWebHistory(),
     routes:[
         {
-            path: '/portfolio/',
+            path: '/',
             name: 'home',
             meta:{
                 title: "ホーム"  
@@ -11,7 +11,7 @@ const router =  createRouter({
             component: () => import('./views/Home.vue')
         },
         {
-            path: '/portfolio/about',
+            path: '/about',
             name: 'about',
             props: true,
             meta:{
@@ -20,7 +20,7 @@ const router =  createRouter({
             component: () => import('./views/About.vue')
         },
         {
-            path: '/portfolio/projectlist',
+            path: '/projectlist',
             name: 'projectlist',
             props: true,
             meta:{
@@ -29,7 +29,7 @@ const router =  createRouter({
             component: () => import('./views/ProjectList.vue')
         },
         {
-            path: '/portfolio/project/:id',
+            path: '/project/:id',
             name: 'project',
             props: true,
             meta:{
@@ -38,7 +38,7 @@ const router =  createRouter({
             component: () => import('./views/Project.vue')
         },        
         {
-            path: '/portfolio/study_meeting/:id',
+            path: '/study_meeting/:id',
             name: 'study_meeting',
             props: true,
             meta:{
@@ -47,7 +47,7 @@ const router =  createRouter({
             component: () => import('./views/study_meeting.vue')
         },
         {
-            path: '/portfolio/original/:id',
+            path: '/original/:id',
             name: 'original',
             props: true,
             meta:{
