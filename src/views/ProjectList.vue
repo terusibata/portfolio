@@ -162,12 +162,12 @@ const study_meeting_list = ref([
 		detail:"LINE Bot を作るハンズオン勉強会を開催しました。今回は、しりとりを遊べるLINE Botを作りました。学生のみに囚われず、社会人の方々にもご参加頂きました。",
 		id:"LINE-bot"
 	},
-	// {
-	// 	title:"Python 勉強会",
-	// 	img:"/images/project/list/Python.png",
-	// 	detail:"Pythonの基礎的な文法を演習形式で行った勉強会です。今回は、問題の進捗が主催者にすぐ分かるオリジナルアプリで「何が分からないかが分からない」初心者に手厚く迅速なサポートができました。",
-	// 	id:"Python"
-	// }
+	{
+		title:"Python 勉強会",
+		img:"/images/project/list/Python.png",
+		detail:"Pythonの基礎的な文法を演習形式で行った勉強会です。今回は、問題の進捗が主催者にすぐ分かるオリジナルアプリで「何が分からないかが分からない」初心者に手厚く迅速なサポートができました。",
+		id:"Python"
+	}
 ])
 
 const original_list = ref([
@@ -243,7 +243,7 @@ onMounted(() => {
     gap: 20px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
-    background-color: rgba(255,255,255, 0.075);
+    background-color: rgba(0, 0, 0, 0.2);
     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
     border: 2px rgba(255,255,255,0.4) solid;
     border-bottom: 2px rgba(40,40,40,0.35) solid;

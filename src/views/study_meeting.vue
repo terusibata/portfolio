@@ -2,6 +2,7 @@
 	<div class="flex-area">
 		<div v-if="!NotFound" class="project-area">
 			<LINEbot v-if="id == 'LINE-bot'"></LINEbot>
+			<Python v-if="id == 'Python'"></Python>
 		</div>
 		<NotFoundcard v-else :comment="'勉強会の記事'"></NotFoundcard>
 	</div>
@@ -17,6 +18,7 @@
 import {useRouter, useRoute} from "vue-router";
 import {onBeforeMount, ref, onMounted} from 'vue'
 import LINEbot from "../components/study_meeting/LINE-bot.vue"
+import Python from "../components/study_meeting/Python.vue"
 import NotFoundcard from "../components/Card/NotFound_card.vue"
 
 const router = useRouter()
@@ -90,7 +92,7 @@ onBeforeMount(()=>{
     gap: 20px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
-    background-color: rgba(255,255,255, 0.075);
+    background-color: rgba(0, 0, 0, 0.2);
     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
     border: 2px rgba(255,255,255,0.4) solid;
     border-bottom: 2px rgba(40,40,40,0.35) solid;
