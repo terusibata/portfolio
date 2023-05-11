@@ -259,7 +259,7 @@ h1 span {
 	font-weight: bold;
 	margin: 0;
 	margin-top: -60px;
-	color: #034FBC;
+	color: #338cf9;
     text-shadow: 1px 1px 1px black;
 }
 .academic-area .timeline_item .homepage-button{

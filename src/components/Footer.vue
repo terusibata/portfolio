@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="copyright flex">
-            <p>©️2022 terusibata All Rights Reserved</p>
+            <p>©️2023 terusibata All Rights Reserved</p>
         </div>
     </footer>
 </template>
