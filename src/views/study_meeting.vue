@@ -3,6 +3,7 @@
 		<div v-if="!NotFound" class="project-area">
 			<LINEbot v-if="id == 'LINE-bot'"></LINEbot>
 			<Python v-if="id == 'Python'"></Python>
+			<WebApp v-if="id == 'Web-app'"></WebApp>
 		</div>
 		<NotFoundcard v-else :comment="'勉強会の記事'"></NotFoundcard>
 	</div>
@@ -19,6 +20,7 @@ import {useRouter, useRoute} from "vue-router";
 import {onBeforeMount, ref, onMounted} from 'vue'
 import LINEbot from "../components/study_meeting/LINE-bot.vue"
 import Python from "../components/study_meeting/Python.vue"
+import WebApp from "../components/study_meeting/Web-app.vue";
 import NotFoundcard from "../components/Card/NotFound_card.vue"
 
 const router = useRouter()
@@ -66,6 +68,9 @@ onBeforeMount(()=>{
 			break
 		case "Python":
 			document.title = `Python 勉強会 | terusibata`
+			break
+		case "Web-app":
+			document.title = `Webアプリ開発 勉強会 | terusibata`
 			break
 		default:
 			document.title = `勉強会の記事が見つかりません`

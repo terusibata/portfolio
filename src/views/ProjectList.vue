@@ -167,6 +167,12 @@ const study_meeting_list = ref([
 		img:"/images/project/list/Python.png",
 		detail:"Pythonの基礎的な文法を演習形式で行った勉強会です。今回は、問題の進捗が主催者にすぐ分かるオリジナルアプリで「何が分からないかが分からない」初心者に手厚く迅速なサポートができました。",
 		id:"Python"
+	},
+	{
+		title:"Webアプリ開発 勉強会",
+		img:"/images/project/list/web_app.png",
+		detail:"PythonのWebフレームワークであるFlaskを使い、データベースやWeb APIについて学習し、Webアプリを実際に開発する勉強会を開催しました。3日間で完成まで手厚くサポートしました。",
+		id:"Web-app"
 	}
 ])
 
